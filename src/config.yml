@@ -1,0 +1,15 @@
+language: zh_cn
+interval: 1
+vips:
+  vip:
+    groups:
+    - "world:vip:builder"
+    name: VIP
+    rank: 1
+mysql:
+  host: localhost
+  port: 3306
+  database: minecraft
+  prefix: vip_
+  user: root
+  password: password

@@ -1,0 +1,67 @@
+name: Vip
+main: com.it5z.vip.Vip
+version: 0.0.1
+description: 自动管理会员。
+author: Android
+website: http://android.it5z.com/
+softdepend: [GroupManager]
+commands:
+  vip:
+    description: Vip指令
+    usage: /<command> help
+    permission: vip.help
+    permission-message: §c你没有权限使用Vip指令!
+permissions:
+  vip.user:
+    description: 给玩家使用Vip的权限
+    default: true
+    children:
+      vip.help: true
+      vip.info: true
+  vip.admin:
+    description: 给玩家管理Vip的权限
+    default: op
+    children:
+      vip.user: true
+      vip.add: true
+      vip.del: true
+      vip.setlong: true
+      vip.dellong: true
+      vip.list: true
+      vip.listlong: true
+      vip.info.others: true
+      vip.reload: true
+      vip.check.ignore: true
+  vip.help:
+    description: 给予玩家使用Vip帮助指令的权限
+    default: false
+  vip.add:
+    description: 给予玩家增加会员的权限
+    default: false
+  vip.del:
+    description: 给予玩家删除会员的权限
+    default: false
+  vip.setlong:
+    description: 给予玩家设置永久会员的权限
+    default: false
+  vip.dellong:
+    description: 给予玩家删除永久会员的权限
+    default: false
+  vip.list:
+    description: 给予玩家查看当前会员的权限
+    default: false
+  vip.listlong:
+    description: 给予玩家查看永久会员的权限
+    default: false
+  vip.info:
+    description: 给予玩家查看自己会员信息的权限
+    default: false
+  vip.info.others:
+    description: 给予玩家查看他人会员信息的权限
+    default: false
+  vip.reload:
+    description: 给予玩家重载配置的权限
+    default: false
+  vip.check.ignore:
+    description: 检查时忽略拥有此权限的玩家
+    default: false
